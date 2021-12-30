@@ -706,6 +706,8 @@ docker build -t week11:v1.0 .
 
 docker run -p 80:80 -d week11:v1.0
 
+</details>
+
 https://docs.google.com/forms/d/e/1FAIpQLSe0warzcMkioQQjWCaDVC8bqtyorTEzSj7vsAZkNVMyAlRfhA/viewform?vc=0&c=0&w=1&flr=0
 
 https://docs.google.com/forms/d/e/1FAIpQLSe0warzcMkioQQjWCaDVC8bqtyorTEzSj7vsAZkNVMyAlRfhA/viewscore?viewscore=AE0zAgB-t7_VLPYa9q91tpcaPuQSg-klKfBgkeafskgFXa4AObpEpv7_V0obU3Pcfxu29qk
@@ -721,45 +723,6 @@ https://docs.google.com/forms/d/e/1FAIpQLSe0warzcMkioQQjWCaDVC8bqtyorTEzSj7vsAZk
 ![](week11-20211216/05.png)
 
 ![](week11-20211216/06.png)
-
-</details>
-
-### Week 12 : 20211223
-
-<details>
-  <summary>Click to expand!</summary>
-
-By default, a container has no resource constraints and can use as much of a given resource as the host’s kernel scheduler allows.
-
---memory-swap is a modifier flag that only has meaning if --memory is also set. Using swap allows the container to write excess memory requirements to disk when the container has exhausted all the RAM that is available to it. There is a performance penalty for applications that swap memory to disk often.
-
-If --memory-swap is explicitly set to -1, the container is allowed to use unlimited swap, up to the amount available on the host system.
-
-By default, each container's access to the host machine's CPU cycles is unlimited.
-
-Every new container will have 1024 shares of CPU by default. However, this value is shown as 0 if running the command mentioned in the audit section. Alternatively, 1.
-
---cpu-shares
-
-Set this flag to a value greater or less than the default of 1024 to increase or reduce the container’s weight, and give it access to a greater or lesser proportion of the host machine’s CPU cycles. This is only enforced when CPU cycles are constrained. When plenty of CPU cycles are available, all containers use as much CPU as they need. In that way, this is a soft limit. --cpu-shares does not prevent containers from being scheduled in swarm mode. It prioritizes container CPU resources for the available CPU cycles. It does not guarantee or reserve any specific CPU access.
-
-docker run --name week12 -d -p 8080:80 -v /usr/local/share:/tmp nginx:stable
-
-docker container run --name week12 -d -p 8080:80 -v /usr/local/share:/tmp nginx:stable
-
-https://docs.google.com/forms/d/e/1FAIpQLSfNUkAdXaer49CZMzS5EZw2XcAeqdvNxV2mbLqCFCiin5oG4g/viewform?vc=0&c=0&w=1&flr=0
-
-https://docs.google.com/forms/d/e/1FAIpQLSfNUkAdXaer49CZMzS5EZw2XcAeqdvNxV2mbLqCFCiin5oG4g/viewscore?viewscore=AE0zAgC0e-Oq_eVE6pY25WRgGUWwhZSRE2FhjaekCCKaN2kXlrnZM4zC6NZ1XBH-JFk7zIs
-
-![](week12-20211223/01.png)
-
-![](week12-20211223/02.png)
-
-![](week12-20211223/03.png)
-
-</details>
-
-### Week 13 : 20211230
 
 ### Week ?? : ??
 

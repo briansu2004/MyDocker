@@ -767,10 +767,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSfNUkAdXaer49CZMzS5EZw2XcAeqdvNxV2mbLqC
 
 </details>
 
-### Week 13 : 20211230 : Docker Networking
-
-<details>
-  <summary>Click to expand!</summary>
+### Week 13 : 20211230
 
 #### Lab 1
 
@@ -1227,12 +1224,7 @@ $ docker network inspect b3
 
 ![](week13-20211230-dockerNetworking/04.png)
 
-</details>
-
-### Week 14 : 20220106 : Docker Storage
-
-<details>
-  <summary>Click to expand!</summary>
+### Week 14 : 20220106
 
 #### Lab 1
 
@@ -1463,80 +1455,10 @@ $ find /tmp/overlay -name test
 /tmp/overlay/merged/a/test
 ```
 
-3.4
-
-```dos
-echo "New content" > /tmp/overlay/merged/b/b.txt
-cat /tmp/overlay/upper/b/b.txt
-cat /tmp/overlay/lower1/b/b.txt
-```
-
-3.5
-
-```dos
-tree /tmp/overlay
-echo "New content" > /tmp/overlay/merged/c/c.txt
-tree /tmp/overlay
-cat /tmp/overlay/lower2/c/c.txt
-cat /tmp/overlay/upper/c/c.txt
-```
-
-#### Questions
-
-https://docs.google.com/forms/d/e/1FAIpQLSeSCgtPxxA_mvGc_P59S5uv3FLTAH4bcTK7g1aN_jlcgkYb-Q/viewform?vc=0&c=0&w=1&flr=0
-
-https://docs.google.com/forms/d/e/1FAIpQLSeSCgtPxxA_mvGc_P59S5uv3FLTAH4bcTK7g1aN_jlcgkYb-Q/viewscore?viewscore=AE0zAgACeFCSvYFvlH0kckst8uIe2CCKAR49dHTYrPx25pjS8rFxKrdmnOvLHpf6PYjQQi8
-
-```dos
-$ docker volume --help
-
-Usage:  docker volume COMMAND
-
-Manage volumes
-
-Commands:
-  create      Create a volume
-  inspect     Display detailed information on one or more volumes
-  ls          List volumes
-  prune       Remove all unused local volumes
-  rm          Remove one or more volumes
-```
-
-![](image/README/Docker_CRI-O_ContainerD_RunC.png)
-
-![](image/README/a_docker_project.png)
-
-There are three components in the Docker Engine:
-
-- Server: It is the docker daemon called dockerd. It can create and manage docker images. Containers, networks, etc.
-- Rest API: It is used to instruct docker daemon what to do.
-- Command Line Interface (CLI): It is a client which is used to enter docker commands.
-
-![](week14-20220106-dockerStorage/01.png)
-
-![](week14-20220106-dockerStorage/02.png)
-
-![](week14-20220106-dockerStorage/03.png)
-
-![](week14-20220106-dockerStorage/04.png)
-
-</details>
-
-### Week 15 : 20220113 : Docker Compose
-
-<details>
-  <summary>Click to expand!</summary>
-
-#### Questions
-
-</details>
-
 ### Week ?? : ??
 
 <details>
   <summary>Click to expand!</summary>
-
-#### Questions
 
 </details>
 

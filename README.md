@@ -1527,7 +1527,74 @@ There are three components in the Docker Engine:
 <details>
   <summary>Click to expand!</summary>
 
+#### Lab 1
+
+```dos
+cd /tmp
+git clone https://github.com/dockersamples/example-voting-app.git
+```
+
+```dos
+cd /tmp/example-voting-app/vote
+docker build -t voting-app .
+docker run -d -p 5000:80 --name voting-app voting-app
+```
+
+```dos
+docker run -d --name=redis redis:alpine
+
+docker network create backend
+docker network connect backend redis
+docker network connect backend voting-app
+```
+
+```dos
+docker run -d --name=db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e PGDATA=/var/lib/postgresql/data/pgdata postgres:9.4
+docker network connect backend db
+```
+
+```dos
+cd /tmp/example-voting-app/worker
+docker build -t worker-app .
+docker run -d --name worker-app worker-app
+docker network connect backend worker-app
+```
+
+#### Lab 2
+
+```dos
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+docker-compose --version
+```
+
+```dos
+cd /tmp
+git clone https://github.com/dockersamples/example-voting-app.git
+```
+
 #### Questions
+
+https://docs.google.com/forms/d/e/1FAIpQLSe1TFbJYaQupH8GI8cza0-cVVlRd-ygkilj5n_AI9NX7FI2iw/viewform?vc=0&c=0&w=1&flr=0
+
+https://docs.google.com/forms/d/e/1FAIpQLSe1TFbJYaQupH8GI8cza0-cVVlRd-ygkilj5n_AI9NX7FI2iw/viewscore?viewscore=AE0zAgAf4-vFqoYunIPF9nYl0x2Kx3yqcqZsSK4xh26aEjYTk6eUf_zDC03V-lrTBas2wKQ
+
+![](image/README/bind_mount.png)
+
+![](week15-20220113-dockercompose/01.png)
+
+![](week15-20220113-dockercompose/02.png)
+
+![](week15-20220113-dockercompose/03.png)
+
+![](week15-20220113-dockercompose/04.png)
+
+![](week15-20220113-dockercompose/05.png)
+
+![](week15-20220113-dockercompose/06.png)
+
+![](week15-20220113-dockercompose/07.png)
 
 </details>
 

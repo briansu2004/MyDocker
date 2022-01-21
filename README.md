@@ -1596,6 +1596,16 @@ https://docs.google.com/forms/d/e/1FAIpQLSe1TFbJYaQupH8GI8cza0-cVVlRd-ygkilj5n_A
 
 ![](week15-20220113-dockercompose/07.png)
 
+journalctl
+
+Journalctl is a utility for querying and displaying logs from journald, systemd's logging service. Since journald stores log data in a binary format instead of a plaintext format, journalctl is the standard way of reading log messages processed by journald.
+
+Q11
+
+`build: .` means it will be built.
+
+If no `build:`, then will be pulled from Dockerhub.
+
 </details>
 
 ### Week ?? : ??

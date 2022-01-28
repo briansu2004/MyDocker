@@ -1613,6 +1613,8 @@ If no `build:`, then will be pulled from Dockerhub.
 <details>
   <summary>Click to expand!</summary>
 
+</details>
+
 ```dos
 git clone https://github.com/chance2021/dk-devops-review-quiz.git
 
@@ -1971,8 +1973,6 @@ https://www.vegait.rs/media-center/blog/docker-series-docker-swarm-intro#:~:text
 ![](week16-20220120-dockerswarm/09.png)
 
 ![](week16-20220120-dockerswarm/10.png)
-
-</details>
 
 ### Week ?? : ??
 

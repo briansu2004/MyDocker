@@ -1,6 +1,6 @@
-# 准备步骤
-1. 通过浏览器(Chrome/Firefox)**登入实验环境** [Docker Playground](https://katacoda.com/loodse/courses/docker/docker-01-playground)
-2. 点击"**START SCENARIO**"开启实验环境
+# Preparation
+1. Open your browser and go to [Docker Playground](https://katacoda.com/loodse/courses/docker/docker-01-playground)
+2. Click on **START SCENARIO** and follow below instructions for the labs
 
 ---
 # Lab1: Docker Swarm Setup
@@ -9,6 +9,7 @@
 cat /etc/*release*
 nproc
 free -h
+df -h
 docker --version
 systemctl status docker
 docker system info |grep -i swarm
@@ -143,6 +144,11 @@ docker service update --rollback secondservice
 docker service inspect secondservice --pretty|grep -i image
 ```
 
+## 9. Remove the service
+```
+docker service rm secondservice
+docker service ls
+```
 ---
 # Lab4: Ingress network
 ## 1. Create a overlay network
@@ -159,11 +165,20 @@ docker service ls
 docker service ps ingressservice
 ```
 
-## 3. Create a service with host mode and connect to dknet network
-``` 
-docker service create --name=hostservice --publish published=83,target=80,mode=host --network=dknet --replicas=2 yogeshraheja/kodekloudwebimage:v1
+## 3. Remove the service
+```
+docker service rm ingressservice
 docker service ls
-docker service ps hostservice
+```
+
+## 4. Remove the network
+```
+docker network rm dknet
+```
+
+## 5. Remove unused networks
+```
+docker network prune
 ```
 
 ---
@@ -202,6 +217,7 @@ EOF
 ```
 docker stack deploy voting-app-stack --compose-file docker-stack.yaml
 docker stack ls
+docker stack services voting-app-stack
 docker stack ps voting-app-stack
 docker service ls
 docker service ps voting-app-stack_worker
@@ -239,4 +255,9 @@ EOF
 docker stack deploy voting-app-stack --compose-file docker-stack.yaml    
 docker service ls
 docker service ps voting-app-stack_vote
+```
+
+## 4. Remove the stack
+```
+docker stack rm voting-app-stack
 ```
